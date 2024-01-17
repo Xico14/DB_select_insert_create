@@ -15,7 +15,7 @@ select
 from
 	Tracks
 where
-	string_to_array(lower('my'), ' ') && array['my'];
+	string_to_array(lower(track_name), ' ') && array['my'];
 
 select title, count(a.nickname) from genres g
 left join GenresPerformers a2 on g.genres_id = a2.genres_id 
